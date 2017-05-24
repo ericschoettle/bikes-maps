@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Stolen Bike Index
+    </title>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="change me to row">
+        <div class="col-md-12">
+          <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title"><h1>Stolen bike finder</h1></h3>
+              <form id="search" action="/">
+                <h3>Color</h3>
+                <select name="color">
+                  <option value="red">red</option>
+                  <option value="blue">blue</option>
+                  <option value="green">green</option>
+                  <option value="yellow">yellow</option>
+                  <option value="black">black</option>
+                </select>
+                <br><br>
+                <h3>Serial</h3>
+                <input name="serial" type="text" id="serial"> </input>
+                <br><br>
+                <h3>Manufacturer</h3>
+                <input name="manufact" type="text" id="manufact"> </input>
+                <br><br>
+                <h3>Location</h3>
+                <input name="location" type="text" id="location"> </input>
+                <br><br>
+                <input type="submit" class="btn btn-danger">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="output">
+      Search result:
+      </div>
+    </div>
+  </body>
+</html>
