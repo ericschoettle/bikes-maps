@@ -17,32 +17,35 @@
           <div class="panel">
             <div class="panel-heading">
               <h3 class="panel-title"><h1>Stolen bike finder</h1></h3>
-              <form id="search" action="/">
+              <form>
                 <h3>Color</h3>
-                <select name="color">
+                <!-- <select name="colors">
                   <option value="red">red</option>
                   <option value="blue">blue</option>
                   <option value="green">green</option>
                   <option value="yellow">yellow</option>
                   <option value="black">black</option>
-                </select>
+                </select> -->
+
                 <br><br>
                 <h3>Serial</h3>
                 <input name="serial" type="text" id="serial"> </input>
                 <br><br>
                 <h3>Manufacturer</h3>
-                <input name="manufact" type="text" id="manufact"> </input>
+                <input name="manufacturer" type="text" id="manufacturer"> </input>
                 <br><br>
                 <h3>Location</h3>
                 <input name="location" type="text" id="location"> </input>
+                <h3>Distance</h3>
+                <input name="distance" type="number" id="distance"> </input>
                 <br><br>
-                <input type="submit" class="btn btn-danger">
+                <input type="button" id="search" class="btn btn-danger">Search</input>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <div class="output">
+      <div id="output">
       Search result:
       </div>
     </div>

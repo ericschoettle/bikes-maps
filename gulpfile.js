@@ -119,7 +119,7 @@ gulp.task('serve', function() {
 });
 
 //Tasks used in 'serve' above to reload after building
-gulp.task('jsBuild', ['build'], function() {
+gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function() {
   browserSync.reload();
 });
 

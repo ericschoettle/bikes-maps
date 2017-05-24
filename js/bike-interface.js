@@ -1,30 +1,48 @@
 // var BikeTraits = require('./../js/bike.js').bikeTraitsModule;
 //
 // var bikeTraits = ["colors"]
-// var traits = []
+//
+// var displayTraits = function(trait, traitData) {
+//   $('.show')
+// }
+//
 // $(document).ready(function() {
 //   bikeTraits.forEach(function(trait) {
 //     var bikeTrait = new BikeTraits();
-//     var options = bikeTrait.options
+//     bikeTrait.getOptions(trait, displayTraits);
 //     console.log(options)
 //   });
 // });
 
+//first
 var BikeSearch = require('./../js/bike-search.js').bikeSearchModule;
 
+//last
+var displaySearchResults = function(searchObject, response) {
+  for (var i = 0; i < response.length; i++) {
+    if (response[i].title) {
+      $('#output').append(response[i].title)
+    } else {
+      $('#output').append(item)
+    }
+  }
+}
+
+//second
 $(document).ready(function() {
-  $('#search').submit(function() {
+  $('#search').click(function() {
     var serial = $('#serial').val();
-    var manufact = $('#manufact').val();
+    var manufacturer = $('#manufacturer').val();
     var location = $('#location').val();
-    var color = $('select option:checked').val();
+    var distance = $('#distance').val();
+    // var colors = $('select option:checked').val();
     var searchObject = {
       serial: serial,
-      manufact: manufact,
+      manufacturer: manufacturer,
       location: location,
-      color: color
+      distance: distance
     };
-    debugger
-    console.log(searchObject);
+    bikeSearch = new BikeSearch();
+    var test = bikeSearch.search(searchObject, displaySearchResults);
   });
 });
