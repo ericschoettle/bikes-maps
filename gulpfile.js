@@ -104,7 +104,7 @@ gulp.task('cssBuild', function() {
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
 
 //Server
-gulp.task('serve', function() {
+gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: {
       baseDir: "./",
@@ -119,7 +119,7 @@ gulp.task('serve', function() {
 });
 
 //Tasks used in 'serve' above to reload after building
-gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function() {
+gulp.task('jsBuild', ['build'], function() {
   browserSync.reload();
 });
 
